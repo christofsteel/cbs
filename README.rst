@@ -7,6 +7,8 @@ very limited coverage and stores the result in a hdf5 file.
 Usage
 -----
 
+::
+
     cbs [-h] [--min-cov MIN_COV] files [files ...] output
 
 If multiple files are given, a position is designated a blind spot, if no file
@@ -18,12 +20,12 @@ Output
 The output is a hdf5 file with the following structure. For every chromosome a 
 group is created, that contains a dataset called `missing_cov`. The dataset 
 contains rows of tuples of 32bit integer, representing the first blind spot and
-the first position having enough coverage
+the first position having enough coverage.
 
 Install
 -------
 
 This software requires python3, samtools, hdf5, numpy and h5py. All python 
-dependencies should be installed by installing cbs via pip.
+dependencies can be installed by installing cbs via pip::
 
-    pip install https://christofsteel.
+    pip install git+https://github.com/christofsteel/cbs.git
